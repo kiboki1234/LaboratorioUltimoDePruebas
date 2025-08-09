@@ -8,7 +8,8 @@ function factorial(n) {
     throw new TypeError('factorial: n debe ser un entero >= 0');
   }
   if (n === 0 || n === 1) return 1;
-  let acc = 1;
+  // BUG INTENCIONAL: acumulador mal inicializado
+  let acc = 2;
   for (let i = 2; i <= n; i++) acc *= i;
   return acc;
 }
